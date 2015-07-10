@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet/css" src="global.css">
+</head>
+<body>
+ <ul>the products are
+   <% Products.all.each do |product| %>
+   <li> ID <%= product.id %> – <%= product.general_info %> – <%= product.technical_specs %>  – <%= product.where_to_buy %> </li> 
+   <% end %>
+ </ul>
+<form action="delete_save">
+  <input type="text" name="product_id" >
+<input type="submit">
+</form>
+
+  <script src = "global.js">  </script>
+</body>
+</html>
+

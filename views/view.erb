@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet/css" src="global.css">
+</head>
+<body>
+  <% if  @delete %>
+  <p>item deleted</p>
+  <% end %>
+ <ul>the products are
+   <% Products.all.each do |product| %>
+   <li> ID <%= product.id %> – <%= product.general_info %> – <%= product.technical_specs %>  – <%= product.where_to_buy %> </li> 
+   <% end %>
+ </ul>
+
+  <script src = "global.js">  </script>
+</body>
+</html>

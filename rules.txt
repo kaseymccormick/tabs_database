@@ -1,0 +1,23 @@
+Tabs + Database
+
+(Make a brand new project/repository for this.)
+
+First, build a Sinatra application that does the usual creating/editing/deleting/viewing of a Product resource.
+
+For the "products" table, have fields for "general_info", "technical_specs", and "where_to_buy". These should be text fields that'll contain a sentence or two for each product.
+It's not important for this project whether you use a database adapter module from a past project or write your model methods from scratch. Just do what's easiest.
+Build views and forms for the various actions.
+Add a few products, so that you can verify the actions work. On the view page for a given product, display the "general info", "technical specs", and "where to buy" information.
+
+Up to this point, this should be a trivial Sinatra project. But it's been some time since you've worked dedicatedly on a Sinatra project. So part of the value here is simply refreshing your memory about our old friends Ruby, Sinatra, and SQL.
+
+Once you have a view showing the correct information, modify the HTML structure so that you can implement a tab interface (like the one from the Javascript Mini-Exercises) for that info. You'll have one tab each for the product's "General Info", "Technical Specs", and "Where to Buy". You'll need to write some Javascript (or maybe copy some of it over from your mini-exercise) to get the tabs working.
+
+You'll be using a whole bunch of languages for this assignment:
+
+SQL to access your database, which stores the product information.
+HTML for the content, whether it's shown or hidden!
+CSS to hide/show content.
+JavaScript to trigger on-page event actions that change what CSS is being applied.
+Ruby to bridge requests to the server with the database connection.
+If you're thinking, "Hm. This is remarkably similar to what we built during class today." – then you are correct! If you breeze through this, there are stretches below. That said, I don't expect you to breeze through this. Tying all these pieces together is important and difficult, so you might appreciate the extra practice.
