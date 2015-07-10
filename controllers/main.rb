@@ -10,7 +10,7 @@ end
 
 get "/add_save" do
   #send shit to the db
-  @new_entry = Product.add({"general_info" => params["general_info"], "technical_specs" => params["technical_specs"],
+  @new_entry = Products.add({"general_info" => params["general_info"], "technical_specs" => params["technical_specs"],
      "where_to_buy" => params["where_to_buy"]})
   "success"
 end
@@ -20,28 +20,32 @@ get "/delete" do
 end
 
 get "/delete_save" do
-  Product.delete(params["product_id"])
+  Products.delete(params["id"].to_i)
   @delete = true
     erb :"/view"
 end
   
 get "/edit" do
-  @entry = Product.find(params["x"].to_i)
     erb :"/edit_form"
 end
 
-get "/edit_save.:x" do
-  @entry = Product.find(params["product_id"].to_i)
-  @entry.general_info = params["general_info"] 
+get "/edit_save" do
+  @entry = Products.find(params["id"].to_i)
+  @entry.general_info = params["general_info"]
   @entry.technical_specs = params["technical_specs"]
-  @entry.what_to_buy = params["what_to_buy"]   
-  @entry.save
+  @entry.where_to_buy = params["where_to_buy"]
+  @entry.save(params["id"].to_i)
   #send shit to the db
   "success"
 end
 
 get "/view" do
-    erb :"/view"
+    erb :"/view_list"
+end
+
+get "/view_individual/:x" do
+  @view = Products.find(params["x"].to_i)
+  erb :"/view_individual"
 end
 
 

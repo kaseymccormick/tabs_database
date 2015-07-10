@@ -9,10 +9,11 @@
   <% end %>
  <ul>the products are
    <% Products.all.each do |product| %>
-   <li> ID <%= product.id %> – <%= product.general_info %> – <%= product.technical_specs %>  – <%= product.where_to_buy %> </li> 
+   <li><a href ="/view_individual/<%= product.id %>"> – <%= product.general_info %> – <%= product.technical_specs %>  – <%= product.where_to_buy %> </li> 
    <% end %>
  </ul>
 
   <script src = "global.js">  </script>
 </body>
 </html>
+

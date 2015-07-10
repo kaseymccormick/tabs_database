@@ -10,15 +10,15 @@
     <% end %>
   </ul>
   
-  <form action="edit_save/<%= params["x"] %>">
+  <form action="edit_save">
     <p>Enter the product's id you'd like to change.</p>
-    <input type="text" name="product_id" value="<%= @entry.product_id %>">
+    <input type="text" name="id">
     <p>Enter new products general info</p>
-    <input type="text" name="general_info" value="<%= @entry.general_info %>">
-        <p>Enter new products tech specs</p>
-    <input type="text" name="technical_specs" value="<%= @entry.technical_specs %>">
-        <p>Enter new products where to buy</p>
-    <input type="text" name="where_to_buy" value="<%= @entry.where_to_buy %>">  
+    <input type="text" name="general_info">
+    <p>Enter new products tech specs</p>
+    <input type="text" name="technical_specs">
+    <p>Enter new products where to buy</p>
+    <input type="text" name="where_to_buy">  
     
     <input type="submit">
   </form>

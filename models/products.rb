@@ -25,7 +25,7 @@ class Products
   #
   #returns array
 def save(id)
-  CONNECTION.execute("UPDATE ages SET general_info = '#{@general_info}', technical_specs = '#{@technical_specs}', where_to_buy = '#{@where_to_buy}' WHERE id = #{@id};")
+  CONNECTION.execute("UPDATE products SET general_info = '#{@general_info}', technical_specs = '#{@technical_specs}', where_to_buy = '#{@where_to_buy}' WHERE id = #{@id};")
 end
 
 end

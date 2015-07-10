@@ -1,0 +1,38 @@
+    <!doctype HTML>
+    <html>
+    <head>
+      <title>Tabs</title>
+      <link rel="stylesheet" type="text/css" href="global.css">
+    </head>
+    <body>
+    <ul id="tabs">
+    <li id= "tab1">general info</li>
+    <li id= "tab2">technical specs</li>
+    <li id= "tab3">where to buy</li>
+    </ul>
+
+    <div class="tabContent" id="tab1Content">
+      <h2>General Info</h2>
+      <div>
+       <p> <%= @view.general_info %></p>
+      </div>
+    </div>
+
+    <div class="tabContent" id="tab2Content">
+      <h2>Technical Specs</h2>
+      <div>
+       <p> <%= @view.technical_specs %></p>
+      </div>
+    </div>
+
+    <div class="tabContent" id="tab3Content">
+      <h2>Where To Buy</h2>
+      <div>
+       <p> <%= @view.where_to_buy %></p>
+      </div>
+    </div>
+ 
+      <script type="text/javascript" src="global.js"></script>
+
+    </body>
+    </html>
