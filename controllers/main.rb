@@ -10,6 +10,8 @@ end
 
 get "/add_save" do
   #send shit to the db
+  @new_entry = Product.add({"general_info" => params["general_info"], "technical_specs" => params["technical_specs"],
+     "where_to_buy" => params["where_to_buy"]})
   "success"
 end
   
@@ -24,11 +26,16 @@ get "/delete_save" do
 end
   
 get "/edit" do
+  @entry = Product.find(params["x"].to_i)
     erb :"/edit_form"
 end
 
-get "/edit_save" do
-  Product.save
+get "/edit_save.:x" do
+  @entry = Product.find(params["product_id"].to_i)
+  @entry.general_info = params["general_info"] 
+  @entry.technical_specs = params["technical_specs"]
+  @entry.what_to_buy = params["what_to_buy"]   
+  @entry.save
   #send shit to the db
   "success"
 end
